@@ -1,0 +1,125 @@
+Question 1: Run the commands sort, wc and uniq on the commands.js file. Explain how they work and what the output was.
+Sort returns the file sorted alphabetically by line.
+The output of command.js file using sort:
+
+done(data)
+            if(err) throw err;
+         done(userInput);
+        break;
+        commandLibrary.cat(userInputArray.splice(1));
+        const fileName = fullPath[0];
+        fs.readFile(fileName, (err, data) => {
+        })
+      break;
+      commandLibrary.echo(userInputArray.slice(1).join(" "));
+     "cat": function(fullPath){
+     "echo": function(userInput) {
+     process.stdout.write('\nprompt > ');
+     process.stdout.write(output);
+     }
+     },
+    case "cat":
+    case "echo":
+   const command = userInputArray[0];
+   const userInputArray = userInput.split(" ");
+   switch (command) {
+   };
+  }
+ function done(output) {
+ function evaluateCmd(userInput) {
+ module.exports.commandLibrary = commandLibrary;
+ module.exports.evaluateCmd = evaluateCmd;
+ }
+const commandLibrary = {
+const fs = require("fs");
+}
+
+WC prints newline, word, and byte counts for a file.
+The output of commands.js using WC: 37  71 883 commands.js
+
+Uniq sorts each line in a file and only returns different lines.
+The output of commands.js using uniq:
+
+const fs = require("fs");
+
+ function done(output) {
+     process.stdout.write(output);
+     process.stdout.write('\nprompt > ');
+ }
+
+ function evaluateCmd(userInput) {
+   const userInputArray = userInput.split(" ");
+   const command = userInputArray[0];
+
+   switch (command) {
+    case "echo":
+      commandLibrary.echo(userInputArray.slice(1).join(" "));
+      break;
+
+    case "cat":
+        commandLibrary.cat(userInputArray.splice(1));
+        break;
+  }
+}
+
+const commandLibrary = {
+     "echo": function(userInput) {
+         done(userInput);
+     },
+
+     "cat": function(fullPath){
+        const fileName = fullPath[0];
+        fs.readFile(fileName, (err, data) => {
+            if(err) throw err;
+            done(data)
+        })
+     }
+   };
+
+ module.exports.commandLibrary = commandLibrary;
+ module.exports.evaluateCmd = evaluateCmd;
+
+Question 2: Using the pipe (|) connect at least two commands and run it on commands.js. Explain what the output was and why the specific data 
+was outputted.
+
+Using uniq command to find unique line of  the bash.js function and using | to connect the wc command to find number of newline count, word count, byte and characters. 
+
+uniq bash.js | wc
+     13      44     387
+
+Number of lines: 13 , number of words: 44, number of bytes: 387 in the bash.js function.
+
+Question 6: 
+
+
+            function reverseString(str){
+            let result="";
+            let splitString = str.split(" ");
+
+            splitString.forEach(element => {
+            
+                let splitWord = element.split("");
+                let joinArray = splitWord.reverse().join("");
+                
+                result += joinArray + " "
+            });
+
+            return result
+
+            }
+
+            console.log(reverseString("I'm learning to program algorithms!"));
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
